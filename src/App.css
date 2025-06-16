@@ -1,0 +1,190 @@
+/* === Layout & Grid === */
+.chart-grid {
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 1024px) {
+  .chart-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1023px) {
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart-box {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #444;
+  background: #1e1e1e;
+  color: white;
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
+/* === Header and Layout === */
+.dashboard-root {
+  padding: 20px;
+  font-family: Inter, sans-serif;
+  background-color: #121212;
+  min-height: 100vh;
+  color: white;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-menu {
+  background: #333;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* === Summary Cards === */
+.summary-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.summary-card {
+  flex: 1 1 200px;
+  background: #2c2c2c;
+  padding: 12px;
+  border-radius: 8px;
+  color: white;
+}
+
+.summary-label {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.summary-value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* === Filter Bar === */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.filter-button {
+  padding: 6px 12px;
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.filter-button.active {
+  background: #2563eb;
+}
+
+/* === Checkbox Grid (Date Filter) === */
+.checkbox-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.checkbox-grid label {
+  color: #eee;
+  font-size: 13px;
+  margin-right: 12px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.checkbox-grid label:hover {
+  color: #4fc3f7;
+}
+
+/* === Storytelling Feed === */
+.feed-box {
+  flex: 1 1 300px;
+  background: #2c2c2c;
+  padding: 16px;
+  border-radius: 8px;
+  height: 300px;
+  overflow-y: auto;
+  color: white;
+}
+
+.feed-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.feed-list {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.feed-date {
+  color: #ccc;
+  font-size: 12px;
+}
+
+/* === Spinner / Placeholder === */
+.spinner-area {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ccc;
+}
+
+
+
+.checkbox-dropdown {
+  background-color: #1e1e1e;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: 10px;
+}
+
+.checkbox-dropdown label {
+  display: inline-block;
+  margin: 4px 6px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.filter-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.checkbox-dropdown {
+  position: absolute;
+  z-index: 1000;
+  top: 40px;
+  left: 0;
+  width: 300px;
+}
